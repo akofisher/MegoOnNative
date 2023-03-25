@@ -1,0 +1,9 @@
+export const selectLogedin = (state) => state.Logedin.Logedin
+export const selectLoading = (state) => state.Loading.Loading
+export const selectLoadCartSum = (state) => state.cartSum.cartSum
+export const selectCartTotalLoad = (state) => state.totalLoad.totalLoad
+export const selectSpecsLoad = (state) => state.specsLoad.specsLoad
+export const selectBeerLoad = (state) => state.beerLoad.beerLoad
+export const selectWishLoad = (state) => state.wishLoad.wishLoad
+export const selectAdrLoad = (state) => state.adrLoad.adrLoad
+export const selectLoadScr = (state) => state.loadScr.loadScr

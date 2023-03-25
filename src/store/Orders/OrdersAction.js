@@ -1,0 +1,2 @@
+export const SET_ORDERS= 'SET_ORDERS'
+export const SET_LAST_ORDER= 'SET_LAST_ORDER'

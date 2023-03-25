@@ -1,0 +1,5 @@
+export const SET_SEARCH = 'SET_SEARCH'
+export const REMOVE_SEARCH = 'REMOVE_SEARCH'
+export const SET_SEARCH_PAGE = 'SET_SEARCH_PAGE'
+export const SET_SEARCH_OPEN = 'SET_SEARCH_OPEN'
+export const SET_SEARCH_RES = 'SET_SEARCH_RES'

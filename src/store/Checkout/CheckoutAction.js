@@ -1,0 +1,2 @@
+export const SET_PAYMENT= 'SET_PAYMENT'
+export const SET_CHECKOUT_LOAD= 'SET_CHECKOUT_LOAD'

@@ -1,0 +1,10 @@
+export const SET_LOGEDIN = 'SET_LOGEDIN'
+export const SET_LOADING = 'SET_LOADING'
+export const SET_LOAD_CART_SUM = 'SET_LOAD_CART_SUM'
+export const SET_CART_TOTAL_LOAD = 'SET_CART_TOTAL_LOAD'
+export const SET_SPECS_LOAD = 'SET_SPECS_LOAD'
+export const SET_BEER_LOAD = 'SET_BEER_LOAD'
+export const SET_WISH_LOAD = 'SET_WISH_LOAD'
+export const SET_ADR_LOAD = 'SET_ADR_LOAD'
+export const SET_LOAD_SCREEN = 'SET_LOAD_SCREEN'
+

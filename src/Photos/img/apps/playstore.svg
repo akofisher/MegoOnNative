@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="101" height="29" viewBox="0 0 101 29">
+  <g id="Group_209" data-name="Group 209" transform="translate(-263 -1039)">
+    <g id="Group_208" data-name="Group 208">
+      <rect id="Rectangle_293" data-name="Rectangle 293" width="101" height="29" rx="4" transform="translate(263 1039)"/>
+      <g id="google-play" transform="translate(253.104 1043.292)">
+        <path id="Path_175" data-name="Path 175" d="M27.908,17.637,17.656,27.509a1.744,1.744,0,0,1-.76-1.455V9.22a1.744,1.744,0,0,1,.76-1.455Z" transform="translate(0 -7.428)" fill="#2196f3"/>
+        <path id="Path_176" data-name="Path 176" d="M48.229,6.761,44.642,10.21,34.39.337a1.366,1.366,0,0,1,.12-.083A1.754,1.754,0,0,1,36.281.226Z" transform="translate(-16.734)" fill="#4caf50"/>
+        <path id="Path_177" data-name="Path 177" d="M278.272,159.053a1.773,1.773,0,0,1-.927,1.576l-3.421,1.872-3.587-3.448,3.587-3.448,3.421,1.872A1.772,1.772,0,0,1,278.272,159.053Z" transform="translate(-242.429 -148.844)" fill="#ffc107"/>
+        <path id="Path_178" data-name="Path 178" d="M48.229,238.413l-11.948,6.535a1.777,1.777,0,0,1-1.771-.028,1.366,1.366,0,0,1-.12-.083l10.252-9.872Z" transform="translate(-16.734 -224.755)" fill="#f44336"/>
+      </g>
+      <text id="GET_IT_ON" data-name="GET IT ON" transform="translate(292 1052)" fill="#fff" font-size="8" font-family="SegoeUI, Segoe UI"><tspan x="0" y="0">GET IT ON</tspan></text>
+      <text id="Google_play" data-name="Google play" transform="translate(292 1063)" fill="#fff" font-size="11" font-family="SegoeUI-Bold, Segoe UI" font-weight="700"><tspan x="0" y="0">Google play</tspan></text>
+    </g>
+  </g>
+</svg>

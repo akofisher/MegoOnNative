@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>com.apple.developer.associated-domains</key>
+	<array>
+		<string>applinks:org.reactjs.native.example.mego.ge</string>
+		<string>webcredentials:org.reactjs.native.example.mego.ge</string>
+		<string>webcredentials:mego.ge</string>
+		<string>applinks:mego.ge</string>
+		<string>webcredentials:mego.ge</string>
+		<string>applinks:mego.ge</string>
+	</array>
+</dict>
+</plist>
