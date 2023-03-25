@@ -1,1 +1,1 @@
-# MegoOnNative Code
+# Mego.Ge REACT-NATIVE APP
