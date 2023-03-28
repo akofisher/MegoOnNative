@@ -1,5 +1,5 @@
-import React, {useEffect} from 'react'
-import {View, Text, StyleSheet, FlatList} from 'react-native'
+import React, { useEffect } from 'react'
+import { View, Text, StyleSheet, FlatList } from 'react-native'
 import { SafeAreaView } from 'react-native-safe-area-context'
 import Header from '../components/Header'
 import ProdCard from '../components/ProdCard'
@@ -13,91 +13,95 @@ import Loader from '../components/Loader'
 import DraggablePopup from '../components/DraggablePopup'
 
 
-const card = ({item}) => {
-  return (
-      <ProdCard item={item}/>
-  )
+const card = ({ item }) => {
+  if (JSON.parse(item.STEP) !== 0 && JSON.parse(item.PRODUCT_COUNT) > 0) {
+    return (
+      <ProdCard item={item} />
+    )
+  } else if (JSON.parse(item.PRODUCTIVE) == 1) {
+    return (
+      <ProdCard item={item} />
+    )
+  }
 }
 
 export default function CraftBeer() {
-const DraftBeer = useSelector(selectdraftBeer)
-const dispatch = useDispatch()
-const BrLoad = useSelector(selectBeerLoad)
+  const DraftBeer = useSelector(selectdraftBeer)
+  const dispatch = useDispatch()
+  const BrLoad = useSelector(selectBeerLoad)
 
 
-const FetchingBeer = () => {
-  fetch(API, {
-    method: 'POST',
-    headers: {
+  const FetchingBeer = () => {
+    fetch(API, {
+      method: 'POST',
+      headers: {
         'Content-Type': 'application/json',
-    },
-    body: JSON.stringify({
-         ApiMethod: 'GetProductByCat',
+      },
+      body: JSON.stringify({
+        ApiMethod: 'GetProductByCat',
         controller: 'Product',
         pars: {
-            CATEGORY_ID: 9030,
+          CATEGORY_ID: 9030,
         },
-    }),
-}).then(db =>{
-       db.json().then(json => {            
-      if(json.status === 'success' )
-      {    
-       dispatch(setDraftBeer(json.data))           
-       
-      } 
-    })             
-  })
-}
+      }),
+    }).then(db => {
+      db.json().then(json => {
+        if (json.status === 'success') {
+          dispatch(setDraftBeer(json.data))
 
-useEffect(() => {
-  if(BrLoad) {
-    FetchingBeer()
-    dispatch(setBeerLoad(false))
+        }
+      })
+    })
   }
-}, [BrLoad])
+
+  useEffect(() => {
+    if (BrLoad) {
+      FetchingBeer()
+      dispatch(setBeerLoad(false))
+    }
+  }, [BrLoad])
 
 
 
 
 
-  useEffect(() => 
-        {   
-     FetchingBeer()
-          
+  useEffect(() => {
+    FetchingBeer()
+
   }, [])
 
 
 
   return (
     <SafeAreaView style={styles.container}>
-      <Header/>
-      <DraggablePopup/>
+      <Header />
+      <DraggablePopup />
       {BrLoad ? (
-        <Loader/>
+        <Loader />
       ) : (
         <React.Fragment>
 
-            {DraftBeer.length > 0 ? (
-              
-              <SafeAreaView style={styles.specsContainer}>
-                    <Text style={styles.specHeader}>ლუდი</Text>
-            <FlatList
+          {DraftBeer.length > 0 ? (
+
+            <SafeAreaView style={styles.specsContainer}>
+              <Text style={styles.specHeader}>ლუდი</Text>
+              <FlatList
                 data={DraftBeer}
                 renderItem={card}
                 keyExtractor={item => item.UID}
-                columnWrapperStyle={{justifyContent: 'space-between'}}
+                columnWrapperStyle={{ justifyContent: 'space-between' }}
                 numColumns={2}
                 key={2}
                 showsVerticalScrollIndicator={false}
                 showsHorizontalScrollIndicator={false}
-                />
-                </SafeAreaView>
-            ) :
+              />
+            </SafeAreaView>
+          ) :
             (null)}
-        
-            </React.Fragment>
+
+        </React.Fragment>
       )}
-      
+
     </SafeAreaView>
   )
 }
@@ -110,31 +114,31 @@ const styles = StyleSheet.create({
     width: '100%',
     zIndex: 2,
 
-    
-},
-specsContainer: {
-  minWidth: '100%',
-  alignItems: 'center',
-  marginBottom: 20,
-  ...Platform.select({
+
+  },
+  specsContainer: {
+    minWidth: '100%',
+    alignItems: 'center',
+    marginBottom: 20,
+    ...Platform.select({
       android: {
         paddingBottom: 110,
       }
     })
-},
-specHeader: {
-  color: '#ed8d2d', 
-  fontSize: 16, 
-  fontWeight: 'bold',
-  paddingTop: 0,
-  paddingBottom: 20,
-  fontFamily: 'Verdana', 
-  ...Platform.select({
-    android: {
-      fontFamily: 'Roboto', 
+  },
+  specHeader: {
+    color: '#ed8d2d',
+    fontSize: 16,
+    fontWeight: 'bold',
+    paddingTop: 0,
+    paddingBottom: 20,
+    fontFamily: 'Verdana',
+    ...Platform.select({
+      android: {
+        fontFamily: 'Roboto',
         paddingTop: 20,
         paddingBottom: 10,
       }
     })
-},
+  },
 })

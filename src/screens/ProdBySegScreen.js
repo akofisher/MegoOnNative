@@ -15,9 +15,16 @@ import Loader from '../components/Loader';
 
 
 const card = ({ item }) => {
-  return (
-    <ProdCard item={item} />
-  )
+  if (JSON.parse(item.STEP) !== 0 && JSON.parse(item.PRODUCT_COUNT) > 0) {
+    return (
+      <ProdCard item={item} />
+    )
+  } else if (JSON.parse(item.PRODUCTIVE) == 1) {
+    return (
+      <ProdCard item={item} />
+    )
+  }
+
 }
 
 
